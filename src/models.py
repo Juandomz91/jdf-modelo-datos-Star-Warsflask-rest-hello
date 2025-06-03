@@ -5,7 +5,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 db = SQLAlchemy()
 
 class User(db.Model):
-    __tablename__ = "user"
+  
     id: Mapped[int] = mapped_column(primary_key=True)
     email: Mapped[str] = mapped_column(String(120), unique=True, nullable=False)
     password: Mapped[str] = mapped_column(nullable=False)
@@ -20,7 +20,7 @@ class User(db.Model):
         }
 
 class Planet(db.Model):
-    __tablename__ = "planet"
+   
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(100), nullable=False)
     gravity: Mapped[str] = mapped_column(String(50))
@@ -37,7 +37,7 @@ class Planet(db.Model):
         }
 
 class Person(db.Model):
-    __tablename__ = "person"
+    
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(100), nullable=False)
     age: Mapped[int] = mapped_column()
